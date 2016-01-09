@@ -104,6 +104,19 @@ Custom Error Handler in a Servlet container like Tomcat. Open Source Java projec
 </error-page>
 ```
 
+#### Sample Response
+
+```text
+HTTP/1.1 403 Forbidden
+Content-Type: text/plain;charset=ISO-8859-1
+Content-Length: 84
+
+ERROR-403 FORBIDDEN
+
+You don't have permission to access the requested object.
+
+```
+
 ---
 
 ## MAVEN
