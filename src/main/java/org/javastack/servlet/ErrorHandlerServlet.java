@@ -37,7 +37,8 @@ public final class ErrorHandlerServlet extends HttpServlet {
 		final Error err = errors.get(res.getStatus());
 		final byte[] buf;
 		if (true) {
-			final StringBuilder sb = new StringBuilder(32 + err.tag.length() + err.body.length());
+			final int extraLen = ((err != null) ? err.tag.length() + err.body.length() : 0);
+			final StringBuilder sb = new StringBuilder(32 + extraLen);
 			sb.append("ERROR-").append(res.getStatus());
 			if (err != null) {
 				sb.append(" ").append(err.tag).append("\r\n");
