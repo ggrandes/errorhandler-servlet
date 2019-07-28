@@ -35,6 +35,9 @@ public final class ErrorHandlerServlet extends HttpServlet {
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse res) //
 			throws ServletException, IOException {
+		if (res.isCommitted()) {
+			return;
+		}
 		final Error err = errors.get(res.getStatus());
 		final byte[] buf;
 		if (true) {
