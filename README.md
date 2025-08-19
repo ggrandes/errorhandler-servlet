@@ -2,7 +2,7 @@
 
 Custom Error Handler in a Servlet container like Tomcat. Open Source Java project under Apache License v2.0
 
-### Current Stable Version is [1.0.1](https://search.maven.org/#search|ga|1|g%3Aorg.javastack%20a%3Aerrorhandler-servlet)
+### Current Stable Version is [2.0.0](https://search.maven.org/#search|ga|1|g%3Aorg.javastack%20a%3Aerrorhandler-servlet-jakarta)
 
 ---
 
@@ -122,6 +122,16 @@ You don't have permission to access the requested object.
 ## MAVEN
 
 Add the dependency to your pom.xml:
+
+###### jakarta.servlet (tomcat 10+)
+
+    <dependency>
+        <groupId>org.javastack</groupId>
+        <artifactId>errorhandler-servlet-jakarta</artifactId>
+        <version>2.0.0</version>
+    </dependency>
+
+###### javax.servlet (tomcat 7, 8.5, 9)
 
     <dependency>
         <groupId>org.javastack</groupId>
